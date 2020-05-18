@@ -25,6 +25,12 @@ class Waiter
  
   best_tipped_meal.customer
 end
-
+ 
+ 
+  def meals
+  Meal.all.select do |meal|
+    meal.waiter == self #checking for waiter now
+  end
+end
 
 end
